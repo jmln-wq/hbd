@@ -40,3 +40,11 @@ photos.forEach((photo, index) => {
         photo.style.transform = 'scale(1)';
     }, index * 200);
 });
+
+function playMusic() {
+    const iframe = document.getElementById("bg-music");
+    const src = iframe.src;
+    if (!src.includes("autoplay=1")) {
+        iframe.src = src.replace("autoplay=0", "autoplay=1");
+    }
+}
