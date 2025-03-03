@@ -25,21 +25,22 @@ body, html {
 
 .photo-gallery {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;       /* Allows wrapping to next line if needed */
-    gap: 20px;             /* Space between images */
+    flex-wrap: wrap;            /* Allows wrapping to next line if needed */
+    justify-content: center;    /* Centers images horizontally */
+    gap: 20px;                  /* Space between images */
     margin-bottom: 20px;
     text-align: center;
     max-width: 100%;
     padding: 0 20px;
-    align-items: center;   /* Aligns images vertically in the middle */
+    align-items: flex-start;    /* Aligns images to the top of the row */
+    box-sizing: border-box;     /* Ensures padding doesn’t cause overflow */
 }
 
 
 .photo-gallery img {
-    width: 100%;           /* Make images fit the container's width */
-    max-width: 400px;      /* Prevent images from becoming too large */
-    height: auto;          /* Keep aspect ratio */
+    width: 300px;               /* Adjust size if needed */
+    max-width: 100%;            /* Prevents overflow */
+    height: auto;               /* Maintains aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
