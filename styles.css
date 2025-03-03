@@ -5,7 +5,15 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
+    background-color: #ffe4e1; /* Soft pink for a romantic feel */
+    background-image: 
+        radial-gradient(circle at 10px 10px, #ff6b6b 2px, transparent 0), 
+        radial-gradient(circle at 30px 30px, #ff6b6b 2px, transparent 0),
+        url('assets/bd.jpeg'); /* Add your birthday-themed image here */
+    background-size: 40px 40px, 40px 40px, cover;
+    background-blend-mode: overlay; /* Blends hearts with the image */
+    background-attachment: fixed;
 }
 
 .container {
