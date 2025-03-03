@@ -3,31 +3,29 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
-    background-image: url("your-image.jpg"); /* Replace with your image URL */
+    background-image: url("assets/bd.jpeg"); /* Replace with your image URL */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     overflow-x: hidden;  /* Prevents horizontal scroll */
+    overflow-y: hidden;  /* Prevents vertical scroll if causing white space */
 }
 
 .container {
-    min-height: 100vh;  /* Ensures the container covers the full viewport height */
-    box-sizing: border-box;  /* Includes padding and border in height calculation */
     width: 90%;
     max-width: 800px;
     text-align: center;
-    padding: 10px;
-    background-color: #fff;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for the container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    margin: 20px auto;  /* Centers the container */
+    min-height: 100vh;   /* Ensures container covers full height */
+    box-sizing: border-box;  /* Includes padding in height calculation */
     position: relative;
-    overflow: hidden; /* Ensures content stays inside the container */
-    box-sizing: border-box; /* Prevents padding from causing overflow */
-    overflow-x: hidden;    /* Only hides horizontal overflow if needed */
-    overflow-y: auto;      /* Allows vertical scroll if content overflows */
 }
+
 
 .photo-gallery {
     display: flex;
