@@ -24,6 +24,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    animation: bounce 1s ease infinite;
 }
 
 button:hover {
@@ -41,10 +42,6 @@ h1 {
     animation: fadeIn 2s ease-out;
 }
 
-button {
-    animation: bounce 1s ease infinite;
-}
-
 /* Keyframes for animations */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
@@ -56,3 +53,18 @@ button {
     40% { transform: translateY(-10px); }
     60% { transform: translateY(-5px); }
 }
+
+.heart {
+    position: fixed;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b6b;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    to { transform: translateY(-100vh); }
+}
+
