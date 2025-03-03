@@ -98,6 +98,9 @@ h1 {
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    width: 100%;         /* Take full width to push text down */
+    text-align: center;  /* Center the photos inside the container */
+    flex-wrap: wrap;     /* Allow photos to wrap if needed */
 }
 
 .photo-gallery img {
