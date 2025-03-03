@@ -18,6 +18,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.container, body {
+    display: block;
+    width: 100%;
+}
+
 button {
     padding: 10px 20px;
     border: none;
@@ -90,11 +95,13 @@ h1 {
 .photo-gallery {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 20px;
     width: 100%;
     text-align: center;
-    order: -1;  /* Ensures it stays above if parent is flex */
+    flex-wrap: wrap;
+    clear: both;      /* Fix if floats are causing issues */
+    order: -1;        /* Fix if flex is causing issues */
 }
 
 .photo-gallery img {
