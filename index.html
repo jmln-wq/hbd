@@ -10,7 +10,8 @@
     <div id="preloader">
     <div class="spinner"></div>
 </div>
-    <audio id="bg-music" src="https://docs.google.com/uc?export=download&id=14d2IBasq8U7OOvkB1UNIdF-LcFHUY1XN" autoplay loop></audio>
+    <iframe id="bg-music" src="https://www.youtube.com/embed/mR4wxeZ99Fw?autoplay=1&loop=1&playlist=mR4wxeZ99Fw" allow="autoplay" style="display: none;"></iframe>
+    <button onclick="playMusic()">Play Music</button>
 <div class="container">    
     <div class="photo-gallery">
     <div class="photo-item">
@@ -38,6 +39,10 @@
             document.body.classList.add("loaded");
         }, 500);  // Adjust time for how long preloader stays visible
     });
+    function playMusic() {
+        const iframe = document.getElementById("bg-music");
+        iframe.src += "&autoplay=1";
+    }
 </script>
 </body>
 </html>
