@@ -26,13 +26,15 @@ body, html {
 .photo-gallery {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;  /* Space between images */
+    flex-wrap: wrap;       /* Allows wrapping to next line if needed */
+    gap: 20px;             /* Space between images */
     margin-bottom: 20px;
     text-align: center;
-    max-width: 100%;  /* Stays inside the container */
-    padding: 0 20px;  /* Add padding if needed */
+    max-width: 100%;
+    padding: 0 20px;
+    align-items: center;   /* Aligns images vertically in the middle */
 }
+
 
 .photo-gallery img {
     width: 100%;           /* Make images fit the container's width */
