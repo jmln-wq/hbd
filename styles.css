@@ -7,10 +7,9 @@ body, html {
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23ff6b6b'/%3E%3C/svg%3E");
-    background-size: 40px 40px; /* Adjust size of hearts */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23ff6b6b'/%3E%3C/svg%3E");
+    background-size: 60px 60px;  /* Increase this to add more space between hearts */
 }
-
 
 .container {
     width: 90%;
@@ -43,9 +42,9 @@ body, html {
 
 
 .photo-gallery img {
-    width: 300px;               /* Adjust size if needed */
+    width: 400px;               /* Adjust size if needed */
     max-width: 100%;            /* Prevents overflow */
-    height: auto;               /* Maintains aspect ratio */
+    height: 200;               /* Maintains aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
