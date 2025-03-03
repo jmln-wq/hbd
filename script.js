@@ -2,6 +2,12 @@ function revealMessage() {
     const message = document.getElementById("hidden-message");
     message.classList.toggle("hidden");
 }
+
+function playMusic() {
+    const iframe = document.getElementById("bg-music");
+    iframe.src += "&autoplay=1";
+}
+
 function createHeart() {
     const heart = document.createElement("div");
     heart.className = "heart";
@@ -32,15 +38,5 @@ photos.forEach((photo, index) => {
     setTimeout(() => {
         photo.style.opacity = '1';
         photo.style.transform = 'scale(1)';
-    }, index * 200); // Delays each photo slightly
+    }, index * 200);
 });
-
-const music = document.getElementById("bg-music");
-
-    window.addEventListener("load", () => {
-        music.play().catch(error => console.log("Playback failed:", error));
-    });
-
-window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-    });
