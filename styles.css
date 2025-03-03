@@ -1,36 +1,26 @@
-/* Ensure full height for body and html */
-html, body {
+body, html {
     height: 100%;
     margin: 0;
     font-family: 'Times New Roman', sans-serif;
-    background-color: #ffe4e1; /* Soft pink for a romantic feel */
-    background-image: 
-        radial-gradient(circle at 10px 10px, #ff6b6b 2px, transparent 0), 
-        radial-gradient(circle at 30px 30px, #ff6b6b 2px, transparent 0),
-        url('assets/bd.jpeg'); /* Add your birthday-themed image here */
-    background-size: 40px 40px, 40px 40px, cover;
-    background-blend-mode: overlay; /* Blends hearts with the image */
-    background-attachment: fixed;
+    background-color: #ffe4e1;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow-x: hidden; /* Prevents horizontal scroll if hearts overflow */
+    overflow-x: hidden;
 }
 
-/* Center content and add padding */
 .container {
-    width: 90%; /* Make it responsive */
+    width: 90%;
     max-width: 800px;
     text-align: center;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px; /* Prevents touching screen edges */
-    position: relative; /* Ensures children stay inside */
+    margin: 20px;
+    position: relative;
 }
 
-/* Fix for photo gallery alignment */
 .photo-gallery {
     display: flex;
     justify-content: center;
@@ -41,7 +31,7 @@ html, body {
 }
 
 .photo-gallery img {
-    width: 120px;  /* Reduced size for better layout */
+    width: 120px;
     height: 120px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -52,10 +42,8 @@ html, body {
 
 .photo-gallery img:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Button Styles */
 button {
     padding: 10px 20px;
     border: none;
@@ -64,40 +52,29 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    animation: bounce 1s ease infinite;
-    display: inline-block; /* Ensures button stays inside container */
+    display: inline-block;
 }
 
 button:hover {
     background-color: #e07a7a;
 }
 
-/* Hidden message styles */
 .hidden {
     display: none;
     margin-top: 20px;
     color: #333;
 }
 
-/* Fade-in for main text */
 h1 {
     animation: fadeIn 2s ease-out;
     color: #333;
 }
 
-/* Keyframes for animations */
 @keyframes fadeIn {
     0% { opacity: 0; transform: translateY(-20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-    40% { transform: translateY(-10px); }
-    60% { transform: translateY(-5px); }
-}
-
-/* Heart animation */
 .heart {
     position: fixed;
     bottom: 0;
@@ -113,7 +90,6 @@ h1 {
     to { transform: translateY(-100vh); }
 }
 
-/* Confetti animation */
 .confetti {
     position: fixed;
     width: 10px;
