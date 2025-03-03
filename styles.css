@@ -105,3 +105,28 @@ h1 {
     0% { transform: translateY(0) rotate(0deg); }
     100% { transform: translateY(100vh) rotate(360deg); }
 }
+
+.animated-text {
+    font-size: 36px;
+    background: linear-gradient(90deg, #ff6b6b, #f28a8a, #ffe4e1, #f28a8a, #ff6b6b);
+    background-size: 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: gradientShift 5s infinite, fadeIn 2s ease-out;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0%; }
+    100% { background-position: 200%; }
+}
+
+/* Fade-in Keyframes (keep this as is) */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
