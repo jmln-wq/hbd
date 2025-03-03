@@ -25,14 +25,15 @@ body, html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;  /* Increased gap for larger images */
     margin-bottom: 20px;
     text-align: center;
+    max-width: 100%;  /* Ensure it doesn't limit image size */
 }
 
 .photo-gallery img {
-    width: 600px;  /* Adjusted size for better visibility */
-    height: 600px;
+    width: 600px;  /* Larger size as you wanted */
+    height: auto;   /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -40,9 +41,9 @@ body, html {
     transition: transform 0.5s, opacity 0.5s;
 }
 
-
 .photo-gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);  /* Slightly larger on hover for a smoother effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 button {
