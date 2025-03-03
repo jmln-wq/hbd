@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<audio id="bg-music" src="assets/gluesong.mp3" autoplay loop></audio>
+<audio id="bg-music" src="assets/gluesong.mp3" autoplay loop muted></audio>
     
 <div class="container">    
     <div class="photo-gallery">
@@ -31,6 +31,12 @@
     </div>
 </div>
 
-<script src="script.js?v=1" defer></script>
+<script src="script.js?v=1" defer>
+    window.addEventListener("load", () => {
+        const music = document.getElementById("bg-music");
+        music.muted = false;  // Unmute after page loads
+        music.play();          // Ensure it starts playing
+    });
+</script>
 </body>
 </html>
