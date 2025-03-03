@@ -40,3 +40,7 @@ const music = document.getElementById("bg-music");
     window.addEventListener("load", () => {
         music.play().catch(error => console.log("Playback failed:", error));
     });
+
+window.addEventListener("load", () => {
+        document.body.classList.add("loaded");
+    });
