@@ -5,75 +5,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday!</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=1">
+<style>
+    /* Preloader styles */
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffe4e1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    .spinner {
+        border: 4px solid #f3f3f3;
+        border-top: 4px solid #ff6b6b;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    body.loaded #preloader {
+        display: none;
+    }
+</style>
 </head>
 
 <body>
 
-<!-- Preloader -->
 <div id="preloader">
     <div class="spinner"></div>
 </div>
 
-<!-- Main Content -->
-<div class="container">
-    <h1 class="animated-text">Happy Birthday, My Love!</h1>
-    <div class="photo-gallery">
-        <div class="photo-item crowned">
-            <img src="assets/photo1.jpg" alt="Photo 1">
-        </div>
-        <div class="photo-item">
-            <img src="assets/photo2.jpg" alt="Photo 2">
-        </div>
-        <div class="photo-item">
-            <img src="assets/photo3.jpg" alt="Photo 3">
-        </div>
+<!-- SoundCloud Music -->
+<iframe id="bg-music" width="0" height="0" scrolling="no" frameborder="no"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/beabadoobee/beabadoobee-glue-song&auto_play=true&hide_related=false&show_comments=false&show_user=false&show_reposts=false&visual=false">
+</iframe>
+
+<!-- Photo Gallery -->
+<div class="photo-gallery">
+    <div class="photo-item">
+        <img src="assets/photo1.jpg" alt="Photo 1">
     </div>
-    <button onclick="showMessage()">Click Me for a Surprise!</button>
-    <div style ="font-family:Arial; font-size:16px;" id="hidden-message" class="hidden">hi love sorry,
-        wala ako sa tabi mo ngayon 
-        pero i want to make your day special kahit papaano. 
-        sorry sa lahat ng nagawa ko love i will make sure na hindi na yon mauulit, 
-        i will always be on your side mula ngayon, this is your day pero you made me the happiest, 
-        mahal na mahal kita love i will never make you cry again, 
-        you mean everything to me. I love you so much!</div>
+    <div class="photo-item crowned-container">
+        <img src="assets/photo2.jpg" alt="Photo 2" class="crowned">
+        <!-- Crown Element -->
+        <img src="assets/crown.png" alt="Crown" class="crown">
+    </div>
+    <div class="photo-item">
+        <img src="assets/photo3.jpg" alt="Photo 3">
+    </div>
 </div>
 
-<!-- Heart and Confetti Animations -->
-<div class="hearts-container"></div>
-<div class="confetti-container"></div>
+<!-- Greeting Text -->
+<h1 class="animated-text">Happy Birthday, Love!</h1>
 
+<!-- Buttons -->
+<button onclick="playMusic()">Play Music</button>
+<button onclick="revealMessage()">press this kung mahal mo ako 😜</button>
+
+<!-- Hidden Message -->
+<div id="hidden-message" class="hidden">
+    <p style="font-family:Arial; font-size:16px;">
+        hi love sorry, wala ako sa tabi mo ngayon pero i want to make your day special kahit papaano. sorry sa lahat ng nagawa ko love i will make sure na hindi na yon mauulit, i will always be on your side mula ngayon this is your day pero you made me the happiest, mahal na mahal kita love i will never make you cry again, you mean everything to me.
+        <br><br>
+        You are the best thing that ever happened to me. I love you! ❤️
+    </p>
+</div>
+
+<!-- Script Section -->
 <script>
-    // Preloader script
+    // Preloader
     window.addEventListener("load", () => {
-        document.body.classList.add("loaded");
-
-        // Generate multiple hearts
-        for (let i = 0; i < 20; i++) {
-            const heart = document.createElement("div");
-            heart.className = "heart";
-            heart.style.left = `${Math.random() * 100}vw`;
-            heart.style.animationDelay = `${Math.random() * 5}s`;
-            heart.style.animationDuration = `${5 + Math.random() * 5}s`;
-            document.getElementById("hearts-container").appendChild(heart);
-        }
-
-        // Generate multiple confetti
-        for (let i = 0; i < 50; i++) {
-            const confetti = document.createElement("div");
-            confetti.className = "confetti";
-            confetti.style.left = `${Math.random() * 100}vw`;
-            confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-            confetti.style.animationDelay = `${Math.random() * 5}s`;
-            confetti.style.animationDuration = `${5 + Math.random() * 5}s`;
-            document.getElementById("confetti-container").appendChild(confetti);
-        }
+        setTimeout(() => {
+            document.body.classList.add("loaded");
+        }, 500);  // Adjust time for how long preloader stays visible
     });
 
-    // Show hidden message
-    function showMessage() {
-        document.getElementById("hidden-message").classList.toggle("hidden");
-                }
+    // Music Play
+    function playMusic() {
+        const iframe = document.getElementById("bg-music");
+        iframe.src += "&autoplay=1";
+    }
+
+    // Reveal Hidden Message
+    function revealMessage() {
+        const message = document.getElementById("hidden-message");
+        message.classList.toggle("hidden");
+    }
 </script>
 
 </body>
