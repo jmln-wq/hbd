@@ -34,3 +34,9 @@ photos.forEach((photo, index) => {
         photo.style.transform = 'scale(1)';
     }, index * 200); // Delays each photo slightly
 });
+
+window.addEventListener("load", () => {
+        const music = document.getElementById("bg-music");
+        music.muted = false;  // Unmute after page loads
+        music.play();          // Ensure it starts playing
+    });
