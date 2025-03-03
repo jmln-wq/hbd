@@ -12,12 +12,20 @@
     <source src="gluesong.mp3" type="audio/mp3">
     Your browser does not support the audio element.
 </audio>
+    
 <div class="container">    
     <div class="photo-gallery">
-        <img src="assets/photo1.jpg" alt="Memory 1" style="--i: 1;">
-        <img src="assets/photo2.jpg" alt="Memory 2" class="crowned" style="--i: 2;">
-        <img src="assets/photo3.jpg" alt="Memory 3" style="--i: 3;">
-    </div> 
+    <div class="photo-item">
+        <img src="assets/photo1.jpg" alt="Photo 1">
+    </div>
+    <div class="photo-item">
+        <img src="assets/crown.png" alt="Crown" class="crown">
+        <img src="assets/photo2.jpg" alt="Photo 2">
+    </div>
+    <div class="photo-item">
+        <img src="assets/photo3.jpg" alt="Photo 3">
+    </div>
+</div>
     <h1>Happy Birthday, Love!</h1>
     <button onclick="revealMessage()">Click for a Surprise!</button>
     <div id="hidden-message" class="hidden">
