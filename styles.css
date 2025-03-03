@@ -4,7 +4,7 @@ body {
     background-image: 
         radial-gradient(circle at 10px 10px, #ff6b6b 2px, transparent 0), 
         radial-gradient(circle at 30px 30px, #ff6b6b 2px, transparent 0),
-        url('assets/bd.jpeg'); /* Add your birthday-themed image here */
+        url('../assets/bd.jpeg'); /* Add your birthday-themed image here */
     background-size: 40px 40px, 40px 40px, cover;
     background-blend-mode: overlay; /* Blends hearts with the image */
     background-attachment: fixed;
@@ -72,8 +72,12 @@ h1 {
     z-index: 9999; /* Ensure hearts appear above other elements */
 }
 
+.heart {
+    animation: float 5s ease-in-out infinite; /* Added easing for smoothness */
+}
+
 @keyframes float {
-    to { transform: translateY(-100vh); } /* Fixed the typo here */
+    to { transform: translateY(-100vh); }
 }
 
 .confetti {
@@ -84,7 +88,7 @@ h1 {
     animation: confettiFall 5s linear infinite;
     top: -10px;
     border-radius: 50%;
-    z-index: 9999; /* Match heart's z-index */
+    z-index: 9999; /* Already good */
 }
 
 @keyframes confettiFall {
