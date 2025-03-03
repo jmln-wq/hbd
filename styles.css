@@ -21,6 +21,8 @@ body, html {
     position: relative;
     overflow: hidden; /* Ensures content stays inside the container */
     box-sizing: border-box; /* Prevents padding from causing overflow */
+    overflow-x: hidden;    /* Only hides horizontal overflow if needed */
+    overflow-y: auto;      /* Allows vertical scroll if content overflows */
 }
 
 .photo-gallery {
