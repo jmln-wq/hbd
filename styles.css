@@ -33,7 +33,7 @@ body, html {
 
 .photo-gallery img {
     width: 200px;  /* Larger size as you wanted */
-    height: auto;   /* Maintain aspect ratio */
+    height: 200px;   /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
