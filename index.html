@@ -82,6 +82,19 @@
             document.body.classList.add("loaded");
         }, 500);
     });
+    // Play music when the page loads
+    window.addEventListener("load", () => {
+        const music = document.getElementById("bg-music");
+        const playPromise = music.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log("Playback failed:", error);
+                // Try to resume playback on user interaction if blocked
+                document.body.addEventListener("click", () => music.play());
+            });
+        }
+    });
 </script>
 
 </body>
