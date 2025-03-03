@@ -101,29 +101,32 @@ h1 {
     100% { transform: translateY(100vh) rotate(360deg); }
 }
 
-.photo-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    flex-wrap: wrap;
-    clear: both;      /* Fix if floats are causing issues */
-    order: -1;        /* Fix if flex is causing issues */
-}
-
+/* Photo gallery animations */
 .photo-gallery img {
     width: 150px;
     height: 150px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: scale(0.8);
-    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;                    /* Start invisible */
+    transform: scale(0.8);         /* Start slightly smaller */
+    animation: fadeInScale 0.8s ease-out forwards;  /* Trigger animation */
+    animation-delay: calc(var(--i) * 0.3s);  /* Delay for staggered effect */
+    transition: transform 0.5s;    /* Smooth hover effect */
 }
 
 .photo-gallery img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);         /* Zoom on hover */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Keyframes for fade-in and scale-up effect */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
