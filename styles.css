@@ -19,6 +19,7 @@ body, html {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
     position: relative;
+    overflow: hidden; /* Prevents overflow */
 }
 
 .photo-gallery {
@@ -33,15 +34,9 @@ body, html {
 }
 
 .photo-gallery img {
-    width: 300px;        /* Adjust this size if needed */
-    max-width: 100%;     /* Ensures it doesn't overflow the container */
-    height: auto;        /* Maintain aspect ratio */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: scale(0.9);  /* Slightly smaller for a clean appearance */
-    transition: transform 0.5s, opacity 0.5s;
-}
+    width: 250px; /* Try reducing this if it's too big */
+    max-width: 90%; /* Fit better within the container */
+    height: auto;
 
 .photo-gallery img:hover {
     transform: scale(1.05);  /* Smooth hover effect */
