@@ -8,6 +8,9 @@ body {
     background-size: 40px 40px, 40px 40px, cover;
     background-blend-mode: overlay; /* Blends hearts with the image */
     background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
