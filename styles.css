@@ -1,15 +1,15 @@
 body, html {
-    height: 100%;
+    min-height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Times New Roman', sans-serif;
-    background-image: url("assets/bd.jpeg"); /* Replace with your image URL */
+    background-image: url("your-image.jpg"); /* Replace with your image URL */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    overflow-x: hidden;  /* Prevents horizontal scroll */
-    overflow-y: hidden;  /* Prevents vertical scroll if causing white space */
+    overflow-x: hidden; /* Prevents horizontal scroll */
+    /* Remove overflow-y: hidden to enable vertical scroll */
 }
 
 .container {
@@ -17,19 +17,19 @@ body, html {
     max-width: 800px;
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slight opacity for the container */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional opacity */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;  /* Centers the container */
-    min-height: 100vh;   /* Ensures container covers full height */
-    box-sizing: border-box;  /* Includes padding in height calculation */
+    margin: 20px auto;
+    min-height: 100vh;
+    box-sizing: border-box;
     position: relative;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* Ensures all elements follow the box-sizing rule */
+    box-sizing: border-box;
 }
 
 .photo-gallery {
