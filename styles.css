@@ -8,25 +8,31 @@ body {
     background-size: 40px 40px, 40px 40px, cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
+    margin: 0;                     /* Remove default margin */
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    margin: 0;
-    flex-direction: column;  /* New: Stack elements vertically */
+    text-align: center;
+    overflow-x: hidden;            /* Prevent horizontal scroll */
 }
 
 .container {
-    text-align: center;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    margin: 20px;
+    max-width: 600px;               /* Set a max-width for better centering */
+    margin: 0 auto;                 /* Center the container */
     display: flex;
-    flex-direction: column;  /* Stack contents vertically */
-    align-items: center;     /* Center contents horizontally */
+    flex-direction: column;         /* Stack contents vertically */
+    align-items: center;            /* Center contents horizontally */
+    gap: 20px;                      /* Add space between items */
+}
+
+
+h1, button, #hidden-message {
+    text-align: center;
 }
 
 button {
@@ -124,14 +130,8 @@ h1 {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 
