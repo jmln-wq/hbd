@@ -35,18 +35,18 @@ h1, button, #hidden-message {
     text-align: center;
 }
 
-h1 {
-    animation: fadeIn 2s ease-out, colorChange 5s linear infinite;
+.rainbow-text {
+    background: linear-gradient(90deg, #ff6b6b, #ffa726, #66bb6a, #42a5f5, #ff6b6b);
+    background-size: 500%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rainbow 5s linear infinite;
 }
 
-@keyframes colorChange {
-    0% { color: #ff6b6b !important; }
-    25% { color: #ffa726 !important; }
-    50% { color: #66bb6a !important; }
-    75% { color: #42a5f5 !important; }
-    100% { color: #ff6b6b !important; }
+@keyframes rainbow {
+    0% { background-position: 0%; }
+    100% { background-position: 100%; }
 }
-
 
 button {
     padding: 10px 20px;
