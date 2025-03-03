@@ -14,6 +14,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow-x: hidden; /* Prevents horizontal scroll if hearts overflow */
 }
 
 /* Center content and add padding */
@@ -26,6 +27,7 @@ html, body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 20px; /* Prevents touching screen edges */
+    position: relative; /* Ensures children stay inside */
 }
 
 /* Fix for photo gallery alignment */
@@ -35,7 +37,6 @@ html, body {
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
-    width: 100%;
     text-align: center;
 }
 
@@ -64,6 +65,7 @@ button {
     cursor: pointer;
     margin-top: 10px;
     animation: bounce 1s ease infinite;
+    display: inline-block; /* Ensures button stays inside container */
 }
 
 button:hover {
