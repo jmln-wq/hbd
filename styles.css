@@ -105,22 +105,3 @@ h1 {
     0% { transform: translateY(0) rotate(0deg); }
     100% { transform: translateY(100vh) rotate(360deg); }
 }
-
-.audio-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.audio-container a {
-    color: #ff6b6b; /* Match theme color */
-    text-decoration: none;
-}
-
-.audio-container a:hover {
-    text-decoration: underline;
-}
-
-/* Ensure h1 text color stays as intended */
-h1 {
-    color: #333; /* Replace with your desired color */
-}
