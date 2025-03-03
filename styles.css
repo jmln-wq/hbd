@@ -8,11 +8,12 @@ body {
     background-size: 40px 40px, 40px 40px, cover;
     background-blend-mode: overlay;
     background-attachment: fixed;
-    display: flex;                /* Keep flex for centering */
-    align-items: center;          /* Center vertically */
-    justify-content: center;      /* Center horizontally */
-    min-height: 100vh;            /* Ensure it takes full height */
-    margin: 0;                    /* Remove default margin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;  /* New: Stack elements vertically */
 }
 
 .container {
