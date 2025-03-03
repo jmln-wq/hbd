@@ -91,17 +91,18 @@ h1 {
 /* Heart Animation */
 .heart {
     position: fixed;
-    bottom: 0;
     width: 20px;
     height: 20px;
     background-color: #ff6b6b;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: float 5s ease-in-out infinite;
     z-index: 9999;
+    opacity: 0.8;
 }
 
 @keyframes float {
-    to { transform: translateY(-100vh); }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100vh); }
 }
 
 /* Confetti Animation */
@@ -114,11 +115,12 @@ h1 {
     top: -10px;
     border-radius: 50%;
     z-index: 9999;
+    opacity: 0.9;
 }
 
 @keyframes confettiFall {
     0% { transform: translateY(0) rotate(0deg); }
-    100% { transform: translateY(100vh) rotate(360deg); }
+    100% { transform: translateY(100vh) rotate(720deg); }
 }
 
 /* Photo Gallery */
