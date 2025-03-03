@@ -26,3 +26,11 @@ function createConfetti() {
 }
 
 setInterval(createConfetti, 300);
+
+const photos = document.querySelectorAll('.photo-gallery img');
+photos.forEach((photo, index) => {
+    setTimeout(() => {
+        photo.style.opacity = '1';
+        photo.style.transform = 'scale(1)';
+    }, index * 200); // Delays each photo slightly
+});
