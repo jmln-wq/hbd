@@ -40,3 +40,11 @@ window.addEventListener("load", () => {
         music.muted = false;  // Unmute after page loads
         music.play();          // Ensure it starts playing
     });
+
+const music = document.getElementById("bg-music");
+
+    document.addEventListener("click", () => {
+        if (music.paused) {
+            music.play().catch(error => console.log("Playback failed:", error));
+        }
+    });
