@@ -76,3 +76,16 @@ h1 {
     to { transform: translateY(-100vh); }
 }
 
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ffcc00;
+    animation: fall 5s linear infinite;
+    top: -10px;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh) rotate(360deg); }
+}
