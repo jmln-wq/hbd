@@ -96,11 +96,11 @@ h1 {
 .photo-gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-    width: 100%;         /* Take full width to push text down */
-    text-align: center;  /* Center the photos inside the container */
-    flex-wrap: wrap;     /* Allow photos to wrap if needed */
+    width: 100%;
+    text-align: center;
+    order: -1;  /* Ensures it stays above if parent is flex */
 }
 
 .photo-gallery img {
