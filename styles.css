@@ -130,3 +130,22 @@ h1 {
         transform: scale(1);
     }
 }
+
+/* Position the crown above the photo */
+.photo-gallery .crowned {
+    position: relative;
+}
+
+/* Crown styling for the middle image */
+.photo-gallery .crowned::before {
+    content: "";
+    position: absolute;
+    top: -40px;      /* Adjust to place the crown correctly */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;     /* Adjust size as needed */
+    height: auto;
+    background: url('assets/crown.png') no-repeat center;
+    background-size: contain;
+    z-index: 1;       /* Ensure crown is above the image */
+}
