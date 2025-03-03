@@ -35,16 +35,8 @@ photos.forEach((photo, index) => {
     }, index * 200); // Delays each photo slightly
 });
 
-window.addEventListener("load", () => {
-        const music = document.getElementById("bg-music");
-        music.muted = false;  // Unmute after page loads
-        music.play();          // Ensure it starts playing
-    });
-
 const music = document.getElementById("bg-music");
 
-    document.addEventListener("click", () => {
-        if (music.paused) {
-            music.play().catch(error => console.log("Playback failed:", error));
-        }
+    window.addEventListener("load", () => {
+        music.play().catch(error => console.log("Playback failed:", error));
     });
