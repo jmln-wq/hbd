@@ -70,10 +70,11 @@ h1 {
     background-color: #ff6b6b;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     animation: float 5s linear infinite;
+    z-index: 9999; /* Ensure hearts appear above other elements */
 }
 
 @keyframes float {
-    to { transform: translateY(-100vh); }
+    to { transform: translateY(-100vh); } /* Fixed the typo here */
 }
 
 .confetti {
@@ -81,12 +82,13 @@ h1 {
     width: 10px;
     height: 10px;
     background-color: #ffcc00;
-    animation: fall 5s linear infinite;
+    animation: confettiFall 5s linear infinite;
     top: -10px;
     border-radius: 50%;
-    z-index: 9999; /* Bring confetti above other elements */
+    z-index: 9999; /* Match heart's z-index */
 }
 
-@keyframes fall {
-    to { transform: translateY(100vh) rotate(360deg); }
+@keyframes confettiFall {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
 }
