@@ -136,16 +136,25 @@ h1 {
 
 .photo-item {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.crown {
-    position: absolute;
-    top: -30px;        /* Adjust height if needed */
-    width: 40px;       /* Adjust size if needed */
-    z-index: 10;       /* Keep it above the photo */
-    animation: bounce 1s ease infinite; /* Optional bounce effect */
+.crowned {
+    position: relative;
 }
+
+.crowned::before {
+    content: "";
+    background-image: url('assets/crown.png');  /* Path to your crown image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -20px;       /* Adjust for fine-tuning position */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;      /* Adjust size to be small */
+    height: 30px;
+    z-index: 5;       /* Make sure it appears above the photo */
+    animation: bounce 1s ease infinite;  /* Optional: adds a subtle bounce */
+}
+
 
